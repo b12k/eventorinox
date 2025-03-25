@@ -1,13 +1,57 @@
 {
   "name": "eventorinox",
-  "version": "1.0.0",
+  "version": "0.0.0",
   "description": "",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
+  "main": "dist/index.js",
   "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "packageManager": "pnpm@10.5.1"
+  "author": "Bogdan Kolesnyk",
+  "license": "MIT",
+  "packageManager": "pnpm@10.5.2",
+  "engines": {
+    "node": "22.14.0"
+  },
+  "scripts": {
+    "🤝": "████████████████████████ ✋ COMMON 👇 █████████████████████████████",
+    "prepare": "run-s prepare:*",
+    "prepare:env": "turbo run prepare:env --parallel",
+    "prepare:build": "turbo run build --continue",
+    "dev": "turbo run dev",
+    "qc": "turbo run build test:e2e test:unit lint:code lint:styles check:deps check:types check:formatting --continue",
+    "test": "turbo run test:e2e test:unit --continue",
+    "test:e2e": "turbo run test:e2e --continue",
+    "test:unit": "turbo run test:unit --continue",
+    "lint": "turbo run lint:code lint:styles --continue",
+    "lint:code": "turbo run lint:code --continue",
+    "lint:styles": "turbo run lint:styles --continue",
+    "check": "turbo run check:deps check:types check:formatting --continue",
+    "check:deps": "turbo run check:deps --continue",
+    "check:types": "turbo run check:types --continue",
+    "check:formatting": "turbo run check:formatting --continue",
+    "fix": "turbo run fix:code fix:styles fix:formatting --continue",
+    "fix:code": "turbo run fix:code --continue",
+    "fix:styles": "turbo run fix:styles --continue",
+    "fix:formatting": "turbo run fix:formatting --continue",
+    "upgrade:deps": "turbo run upgrade:deps --continue --concurency=1",
+    "build": "turbo run build --continue",
+    "release": "turbo run release --continue --concurency=1",
+    "deploy": "turbo run deploy",
+    "✨": "████████████████████████ ✋ SPECIFIC 👇 ███████████████████████████",
+    "root:qc": "",
+    "root:test": "",
+    "root:lint": "",
+    "root:check": "",
+    "root:fix": "",
+    "root:upgrade:deps": "",
+    "root:upgrade:deps:doctor": "",
+    "🛠️": "████████████████████████ ✋ PRE-CONFIGURED 👇 █████████████████████",
+    "eslint": "echo 👻",
+    "prettier": "echo 👻"
+  },
+  "devDependencies": {
+    "@turbo/gen": "^2.4.4",
+    "husky": "9.1.7",
+    "npm-check-updates": "^17.1.15",
+    "npm-run-all": "^4.1.5",
+    "turbo": "^2.4.4"
+  }
 }
